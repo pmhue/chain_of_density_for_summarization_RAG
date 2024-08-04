@@ -12,6 +12,7 @@ config = configparser.ConfigParser()
 config.read("config.ini")
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
+# print(f"OPENAI_API_KEY: {os.getenv('OPENAI_API_KEY')}") # tocheck
 
 def perform_checks():
     logger.info("being checks")
@@ -46,7 +47,6 @@ def load_file():
     else:
         raise FileNotFoundError(f"Input file not found at path: {input_file_path}")
 
-
 def main():
     logger.info("main() starting")
 
@@ -67,6 +67,7 @@ def main():
     )
 
     completion = make_chat_completion_request(config, msg, n=1)
+
     content = completion["choices"][0]["message"]["content"]
     logger.info(content)
 
