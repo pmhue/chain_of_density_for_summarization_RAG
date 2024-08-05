@@ -68,5 +68,4 @@ Config options like input/output paths are stored in config.ini.
 - ["Annotated + Unannotated CoD Summaries on Hugging Face"](https://huggingface.co/datasets/griffin/chain_of_density/)
 - Generating requirements.txt `poetry export --without-hashes -f requirements.txt --output requirements.txt`
 
-## License
-Copyright (c) 2024 Phan Minh Hue
+
